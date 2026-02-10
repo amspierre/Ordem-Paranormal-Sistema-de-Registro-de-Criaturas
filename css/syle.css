@@ -1,0 +1,210 @@
+/* ==================================================
+   RESET
+================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ==================================================
+     VARIÁVEIS (facilita ajustes)
+  ================================================== */
+  :root {
+    --bg-main: #020617;
+    --bg-soft: #0f172a;
+    --gold: #f5d58a;
+    --gold-soft: rgba(245, 213, 138, 0.35);
+    --text-main: #e5e7eb;
+    --text-soft: #cbd5f5;
+    --border-soft: rgba(245, 213, 138, 0.15);
+  }
+  
+  /* ==================================================
+     BODY
+  ================================================== */
+  body {
+    background: radial-gradient(circle at top, #0b1220, var(--bg-main));
+    color: var(--text-main);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* ==================================================
+     TÍTULOS
+  ================================================== */
+  h1, h2, h3 {
+    color: #f8fafc;
+    letter-spacing: 1px;
+  }
+  
+  .display-5 {
+    text-transform: uppercase;
+    text-shadow:
+      0 0 6px var(--gold-soft),
+      0 0 14px rgba(245, 213, 138, 0.2);
+  }
+  
+  /* ==================================================
+     TEXTOS
+  ================================================== */
+  p, .lead {
+    color: var(--text-soft);
+  }
+  
+  small {
+    letter-spacing: 0.5px;
+  }
+  
+  /* ==================================================
+     NAVBAR
+  ================================================== */
+  #navbar {
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  
+  #navbar .fs-4 {
+    color: var(--gold);
+    text-shadow: 0 0 8px var(--gold-soft);
+  }
+  
+  #navbar .nav-link {
+    color: var(--text-soft);
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  #navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--gold);
+    transition: 0.3s;
+  }
+  
+  #navbar .nav-link:hover {
+    color: var(--gold);
+  }
+  
+  #navbar .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* ==================================================
+     APRESENTAÇÃO
+  ================================================== */
+  .display-5 .fw-bold .text-body-emphasis .lh-1 .mb-3{
+    color: var(--gold);
+    text-shadow: 0 0 8px var(--gold-soft);
+  }
+  /* ==================================================
+     ALBUM / REGISTROS
+  ================================================== */
+  .album {
+    background: radial-gradient(circle at top, #0b1220, var(--bg-main));
+  }
+  
+  .album h1 {
+    margin-bottom: 3rem;
+  }
+  
+  /* ==================================================
+     CARDS
+  ================================================== */
+  .card {
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 23, 42, 0.95),
+      rgba(2, 6, 23, 0.95)
+    );
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.35s ease;
+  }
+  
+  .card img {
+    filter: grayscale(25%) contrast(1.05);
+    transition: 0.35s ease;
+  }
+  
+  .card:hover img {
+    filter: grayscale(0%) contrast(1.15);
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 0 25px rgba(245, 213, 138, 0.25),
+      0 0 60px rgba(0,0,0,0.8);
+  }
+  
+  .card h3 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    color: var(--text-soft);
+  }
+  
+  /* ==================================================
+     BOTÕES
+  ================================================== */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), #eab308);
+    border: none;
+    color: #020617;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #eab308, var(--gold));
+    box-shadow: 0 0 14px var(--gold-soft);
+    color: #020617;
+  }
+  
+  /* ==================================================
+     TEXTOS AUXILIARES
+  ================================================== */
+  .text-body-secondary {
+    color: #94a3b8 !important;
+  }
+  
+  /* ==================================================
+     FOOTER
+  ================================================== */
+  footer {
+    background: rgba(2, 6, 23, 0.95);
+    border-top: 1px solid var(--border-soft);
+  }
+  
+  footer p {
+    color: var(--text-soft);
+  }
+  
+  footer p:nth-child(2) {
+    color: var(--gold);
+    text-shadow: 0 0 8px var(--gold-soft);
+    font-style: italic;
+  }
+  
+  /* ==================================================
+     RESPONSIVO
+  ================================================== */
+  @media (max-width: 768px) {
+    .display-5 {
+      font-size: 1.8rem;
+    }
+  
+    #navbar .nav-link::after {
+      display: none;
+    }
+  }
+  
